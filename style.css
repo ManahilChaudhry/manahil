@@ -1,0 +1,213 @@
+/* ================= New Soft Color Theme ================= */
+:root {
+    --primary-color: #0ea5e9;     /* Sky Blue */
+    --secondary-color: #38bdf8;   /* Light Blue */
+    --accent-color: #14b8a6;      /* Teal */
+
+    --bg-main: #f1f5f9;           /* Light gray background */
+    --bg-secondary: #e2e8f0;
+    --card-bg: #ffffff;
+
+    --text-dark: #0f172a;
+    --text-gray: #475569;
+
+    --shadow-sm: 0 4px 10px rgba(0,0,0,0.1);
+    --shadow-lg: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ================= Global ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+/* ================= Navbar ================= */
+.navbar {
+    background: #ffffff;
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.admin-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ================= Headings ================= */
+h1, h2 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+p {
+    text-align: center;
+    color: var(--text-gray);
+    max-width: 650px;
+    margin: auto;
+}
+
+/* ================= Services ================= */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 26px;
+    margin: 50px auto;
+}
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.services a {
+    background: white;
+    padding: 40px 20px; /* increased padding for bigger card */
+    text-align: center;
+    border-radius: 12px; /* slightly bigger rounded corners */
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px; /* bigger text */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* bigger shadow for prominence */
+    transition: all 0.3s ease;
+}
+
+.services a:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-5px); /* subtle lift on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    border-color: #007bff;
+}
+
+/* ================= Form ================= */
+form {
+    background: var(--card-bg);
+    padding: 40px;
+    max-width: 450px;
+    margin: 40px auto;
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 13px 15px;
+    margin: 10px 0 20px;
+    border-radius: 10px;
+    border: 1px solid #cbd5f5;
+    background: #f8fafc;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(14,165,233,0.25);
+}
+
+/* ================= Button ================= */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+/* ================= Table ================= */
+.table-container {
+    margin: 60px auto;
+    max-width: 95%;
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f8fafc;
+    color: var(--primary-color);
+    padding: 16px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: var(--text-dark);
+}
+
+tr:hover {
+    background: #f1f5f9;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
